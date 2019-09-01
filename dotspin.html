@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Dot spin</title>
+        <script></script>
+    </head>
+    <body>
+        <header>
+            <style>
+                .dotouter {
+                    animation-name: spin;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+                .dotouter1 {
+                    animation-duration: 2000ms;
+                }
+                .dotouter2 {
+                    animation-duration: 1900ms;
+                }
+                .dotouter3 {
+                    animation-duration: 1800ms;
+                }
+                .waveouter {
+                    animation-name: waves;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                }
+                .waveouter1 {
+                    animation-duration: 2000ms;
+                }
+                .waveouter2 {
+                    animation-duration: 1900ms;
+                }
+                .waveouter3 {
+                    animation-duration: 1800ms;
+                }
+                @keyframes spin {
+                    from {
+                        transform:rotate(0deg);
+                    }
+                    to {
+                        transform:rotate(360deg);
+                    }
+                }
+                @keyframes waves {
+                    0% {
+                        transform:translate(0, -50px);
+                    }
+                    50% {
+                        transform:translate(0, 50px);
+                    }
+                    100% {
+                        transform:translate(0, -50px);
+                    }
+                }
+            </style>
+            <script src="dotspin.js">
+            </script>
+        </header>
+        <main>
+            <div>
+                Reload page any time to restart animations
+                <h2>Emergent spirals...</h2>
+                <svg style="width:200;height:200">
+                    <g id="dotswrapper" transform="translate(100 100)">
+                        <g class="dotouter dotouter1">
+                            <circle cx="0" cy="0" r="5" fill="#adb74c"  transform="translate(30 0)" />
+                        </g>
+                        <g class="dotouter dotouter2">
+                            <circle cx="0" cy="0" r="5" fill="#777744" transform="translate(40 0)"/>
+                        </g>
+                        <g class="dotouter dotouter3">
+                            <circle cx="0" cy="0" r="5" fill="blue" transform="translate(50 0)"/>
+                        </g>
+                    </g>
+                </svg>
+                <hr>
+                <h2>Pendulum Waves...</h2>
+                <svg style="width:200;height:200">
+                        <g transform="translate(10 100)">
+                            <g class="waveouter waveouter1">
+                                <circle cx="0" cy="0" r="5" fill="#adb74c"  transform="translate(30 0)" />
+                            </g>
+                            <g class="waveouter waveouter2">
+                                <circle cx="0" cy="0" r="5" fill="#777744" transform="translate(40 0)"/>
+                            </g>
+                            <g class="waveouter waveouter3">
+                                <circle cx="0" cy="0" r="5" fill="blue" transform="translate(50 0)"/>
+                            </g>
+                        </g>
+                    </svg>
+            </div>
+        </main>
+    </body>
+</html>
+
