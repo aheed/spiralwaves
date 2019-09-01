@@ -26,7 +26,7 @@ function createAllDots(nofDots, minRadius, maxRadius, minPeriod, maxPeriod)
         let deltaPeriod = (maxPeriod - minPeriod) / nofDots;
         let period = minPeriod + deltaPeriod * i;
         let deltaRadius = (maxRadius - minRadius) / nofDots;
-        let radius = minRadius + deltaRadius * i;
+        let radius = maxRadius - (minRadius + deltaRadius * i);
         createdot(dotselem, period, radius);
     }
 
@@ -34,10 +34,8 @@ function createAllDots(nofDots, minRadius, maxRadius, minPeriod, maxPeriod)
 
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
-    //createAllDots(8, 10, 90, 1000, 2000);
+    createAllDots(32, 10, 100, 900, 1000);
 });
-
-
 
 
 
