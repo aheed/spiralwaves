@@ -10,7 +10,7 @@ function createdot(parentelem, period, radius)
     circleelem.setAttribute("cx" ,0);
     circleelem.setAttribute("cy" ,0);
     circleelem.setAttribute("r" ,5);
-    circleelem.setAttribute("fill" ,"red");
+    circleelem.setAttribute("fill" ,"yellow");
     circleelem.setAttribute("transform" , "translate(" + radius + " 0)");
     dotelem.appendChild(circleelem);
     parentelem.appendChild(dotelem);
